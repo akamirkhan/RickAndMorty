@@ -7,19 +7,22 @@
 
 import UIKit
 
-enum NetworkError: Error {
-    case serverError
-    case decodingError
-    case invalidData
-    
-    var message: String {
+enum NetworkError: Error, CustomStringConvertible {
+    case nonHTTPResponse
+    case requestFailed(Int)
+    case serverError(Int)
+    case networkError(Error)
+    case decodingError(Error)
+    case incorrectUrl
+
+    var description: String {
         switch self {
-        case .serverError:
-            return "Проверьте ваше интернет соеденение"
-        case .decodingError:
-            return "Ошибка декодирования"
-        case .invalidData:
-            return "Не удалось получить данные с сервера"
+        case .nonHTTPResponse: return "Non-HTTP response received"
+        case .requestFailed(let status): return "Received HTTP \(status)"
+        case .serverError(let status): return "Server Error - \(status)"
+        case .networkError(let error): return "Failed to load the request: \(error)"
+        case .decodingError(let decError): return "Failed to process response: \(decError)"
+        case .incorrectUrl: return "An error occurred while processing the URL"
         }
     }
 }

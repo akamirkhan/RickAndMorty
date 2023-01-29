@@ -133,7 +133,8 @@
 		FD1F6556298673AD00BB4F9C /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				FD1F6558298673AD00BB4F9C /* NetworkService.swift */,
+				FDD8DCB92986844E00B55581 /* RickAndMorty */,
+				FDD8DCBC298689B900B55581 /* NetworkService */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -196,8 +197,16 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		FDD8DCBC298689B900B55581 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
 				FD1F6557298673AD00BB4F9C /* NetworkError.swift */,
+				FD1F6558298673AD00BB4F9C /* NetworkService.swift */,
 				FDD8DCB229867ECB00B55581 /* Endpoint.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */

@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Character: Decodable {
+struct Character: Codable {
     let name: String
     let image: String
     let species: String
@@ -18,11 +18,11 @@ struct Character: Decodable {
 }
 
 extension Character {
-    struct Container: Decodable {
+    struct Container: Codable {
         let results: [Character]
     }
 }
 
-struct Location: Decodable {
+struct Location: Codable {
     let name: String
 }

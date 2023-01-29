@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct Episode: Decodable {
+struct Episode: Codable {
     let name: String
     let episode: String
     let airDate: String
@@ -15,7 +15,7 @@ struct Episode: Decodable {
 }
 
 extension Episode {
-    struct Container: Decodable {
+    struct Container: Codable {
         let results: [Episode]
     }
 }

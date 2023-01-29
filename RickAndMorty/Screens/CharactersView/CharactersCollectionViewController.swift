@@ -12,6 +12,10 @@ final class CharactersCollectionViewController: UICollectionViewController {
     private let networkService = RickAndMortyService()
     private var characters: [Character] = []
     
+    private var isFetchInProgress = false
+    private var isAllCharactersLoaded = false
+    private var currentPage = 1
+    
     override init(collectionViewLayout layout: UICollectionViewLayout) {
         super.init(collectionViewLayout: layout)
     }
@@ -23,43 +27,72 @@ final class CharactersCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        collectionView.registerFooter(CharacterFooterView.self)
         collectionView.register(CharacterCell.self)
-        getCharacter()
+        getCharacters()
     }
     
-    private func getCharacter() {
-        networkService.getCharacters() { [weak self] result in
+    private func getCharacters() {
+        guard !isFetchInProgress, !isAllCharactersLoaded else { return }
+        
+        networkService.getCharacters(for: currentPage) { [weak self] result in
+            self?.isFetchInProgress = true
             switch result {
             case .success(let response):
-                self?.characters = response.results
-                self?.collectionView?.reloadData()
+                self?.handleResponse(response)
             case .failure(let error):
+                self?.isFetchInProgress = false
                 print(error)
             }
         }
     }
     
+    private func handleResponse(_ response: Character.Container) {
+        currentPage += 1
+        isFetchInProgress = false
+        characters.append(contentsOf: response.results)
+        isAllCharactersLoaded = characters.count == response.info.count
+        collectionView.reloadData()
+    }
+
 }
 
-extension CharactersCollectionViewController {
+// MARK: - UICollectionViewDataSource & UICollectionViewDelegate & UICollectionViewDelegateFlowLayout
+extension CharactersCollectionViewController: UICollectionViewDelegateFlowLayout {
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         characters.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeue(CharacterCell.self, indexPath: indexPath)
+        let item = collectionView.dequeue(CharacterCell.self, indexPath: indexPath)
         
         let character = characters[indexPath.item]
-        cell.configure(with: character)
+        item.configure(with: character)
+        if indexPath.item == characters.count - 1 {
+            getCharacters()
+        }
         
-        return cell
+        return item
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        collectionView.deselectItem(at: indexPath, animated: true)
+        
         let infoViewController = CharacterInfoViewController()
         infoViewController.setupData(for: characters[indexPath.row])
         navigationController?.pushViewController(infoViewController, animated: true)
-        collectionView.deselectItem(at: indexPath, animated: true)
     }
     
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        let footerView = collectionView.dequeueFooter(CharacterFooterView.self, indexPath: indexPath)
+        return footerView
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
+        let size = isAllCharactersLoaded ? CGSize() : CGSize(width: view.frame.width, height: 60)
+        return size
+    }
+
 }
+

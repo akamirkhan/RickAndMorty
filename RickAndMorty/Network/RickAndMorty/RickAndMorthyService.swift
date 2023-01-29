@@ -19,8 +19,8 @@ final class RickAndMortyService {
         networkService.makeRequest(to: .characters(for: ids), completion: completion)
     }
     
-    func getCharacters(completion: @escaping Handler<Character.Container>) {
-        networkService.makeRequest(to: .characters, completion: completion)
+    func getCharacters(for page: Int, completion: @escaping Handler<Character.Container>) {
+        networkService.makeRequest(to: .characters(for: page), completion: completion)
     }
     
     func getEpisodes(completion: @escaping Handler<Episode.Container>) {

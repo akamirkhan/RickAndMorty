@@ -8,8 +8,11 @@
 import Foundation
 
 extension Endpoint {
-    static var characters: Self {
-        Endpoint(path: "character")
+    static func characters(for page: Int) -> Self {
+        Endpoint(
+            path: "character",
+            queryItems: [URLQueryItem(name: "page", value: "\(page)")]
+        )
     }
     
     static func characters(for ids: String) -> Self {

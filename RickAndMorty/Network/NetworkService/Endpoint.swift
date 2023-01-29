@@ -13,19 +13,13 @@ struct Endpoint {
 }
 
 extension Endpoint {
-    var url: URL {
+    var url: URL? {
         var components = URLComponents()
         components.scheme = "https"
-        components.host = "rickandmortyapi.com/api"
-        components.path = "/" + path
+        components.host = "rickandmortyapi.com"
+        components.path = "/api/" + path
         components.queryItems = queryItems
-
-        guard let url = components.url else {
-            preconditionFailure(
-                "Invalid URL components: \(components)"
-            )
-        }
-
-        return url
+        
+        return components.url
     }
 }

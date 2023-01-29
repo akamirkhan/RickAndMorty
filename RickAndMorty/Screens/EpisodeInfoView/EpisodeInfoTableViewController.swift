@@ -1,5 +1,5 @@
 //
-//  EpisodeDetailsTableViewController.swift
+//  EpisodeInfoTableViewController.swift
 //  RickAndMorty
 //
 //  Created by Amirkhan Akaev on 27.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodeDetailsTableViewController: UITableViewController {
+final class EpisodeInfoTableViewController: UITableViewController {
     
     private let activityIndicator = UIActivityIndicatorView(style: .large)
     private let networkService = NetworkService()
@@ -17,7 +17,7 @@ final class EpisodeDetailsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.register(EpisodeDetailCell.self)
+        tableView.register(EpisodeInfoCell.self)
         setupActivityIndicator()
     }
     
@@ -34,17 +34,6 @@ final class EpisodeDetailsTableViewController: UITableViewController {
     func setupData(for episode: Episode) {
         episodeInfo = [episode.name, episode.airDate, episode.episode]
         loadCharacters(for: episode)
-        
-        //        let characterIcons = episode?.characters.map { link -> String in
-        //            let extendedLink = link.appending(".jpeg")
-        //            let url = URL(string: extendedLink)!
-        //            let lastComponent = url.lastPathComponent
-        //            var newUrl = url.deletingLastPathComponent()
-        //            newUrl.appendPathComponent("avatar")
-        //            newUrl.appendPathComponent(lastComponent)
-        //
-        //            return newUrl.absoluteString
-        //        }
     }
     
     private func loadCharacters(for episode: Episode) {
@@ -65,37 +54,12 @@ final class EpisodeDetailsTableViewController: UITableViewController {
                 print(error)
             }
         }
-            
-//        var characters: [CharacterRow] = []
-//        let dispatchGroup = DispatchGroup()
-//
-//        episode.characters.forEach { character in
-//            guard let characterId = URL(string: character)?.lastPathComponent else { return }
-//            dispatchGroup.enter()
-//            networkService.getCharacter(with: characterId) { result in
-//                switch result {
-//                case .success(let character):
-//                    characters.append(CharacterRow(row: .init(title: character.name, icon: character.image)))
-//                    dispatchGroup.leave()
-//                case .failure(let error):
-//                    print(error)
-//                    dispatchGroup.leave()
-//                }
-//            }
-//        }
-//
-//        dispatchGroup.notify(queue: .main) {
-//            self.sections.append(.characters(characters: characters))
-//            self.tableView.reloadData()
-//        }
-        
-        
     }
     
 }
 
 // MARK: - Table view data source
-extension EpisodeDetailsTableViewController {
+extension EpisodeInfoTableViewController {
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return sections.count
@@ -110,7 +74,7 @@ extension EpisodeDetailsTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeue(EpisodeDetailCell.self, indexPath: indexPath)
+        let cell = tableView.dequeue(EpisodeInfoCell.self, indexPath: indexPath)
         let section = sections[indexPath.section]
         let row = section.rows[indexPath.row]
         let info = episodeInfo[indexPath.row, default: ""] ?? ""

@@ -46,11 +46,11 @@ extension EpisodesTableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let detailsView = EpisodeDetailsTableViewController()
-        detailsView.setupData(for: episodes[indexPath.row])
-        
-        navigationController?.pushViewController(detailsView, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
+        let episodeInfo = EpisodeInfoTableViewController()
+        episodeInfo.setupData(for: episodes[indexPath.row])
+        
+        navigationController?.pushViewController(episodeInfo, animated: true)
     }
     
 }

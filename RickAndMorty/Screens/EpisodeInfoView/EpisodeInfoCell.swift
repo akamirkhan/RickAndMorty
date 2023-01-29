@@ -1,5 +1,5 @@
 //
-//  EpisodeDetailCell.swift
+//  EpisodeInfoCell.swift
 //  RickAndMorty
 //
 //  Created by Amirkhan Akaev on 27.01.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class EpisodeDetailCell: UITableViewCell {
+final class EpisodeInfoCell: UITableViewCell {
     
     private let iconImage = UIImageView()
     private let titleLabel = UILabel()

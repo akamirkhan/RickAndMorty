@@ -22,8 +22,8 @@
 		FD1F656F298673AE00BB4F9C /* Array+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6555298673AD00BB4F9C /* Array+Extension.swift */; };
 		FD1F6570298673AE00BB4F9C /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6557298673AD00BB4F9C /* CustomErrors.swift */; };
 		FD1F6571298673AE00BB4F9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6558298673AD00BB4F9C /* NetworkService.swift */; };
-		FD1F6572298673AE00BB4F9C /* EpisodeDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655B298673AE00BB4F9C /* EpisodeDetailCell.swift */; };
-		FD1F6573298673AE00BB4F9C /* EpisodeDetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655C298673AE00BB4F9C /* EpisodeDetailsTableViewController.swift */; };
+		FD1F6572298673AE00BB4F9C /* EpisodeInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655B298673AE00BB4F9C /* EpisodeInfoCell.swift */; };
+		FD1F6573298673AE00BB4F9C /* EpisodeInfoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655C298673AE00BB4F9C /* EpisodeInfoTableViewController.swift */; };
 		FD1F6574298673AE00BB4F9C /* CharacterInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655E298673AE00BB4F9C /* CharacterInfoCell.swift */; };
 		FD1F6575298673AE00BB4F9C /* CharacterInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F655F298673AE00BB4F9C /* CharacterInfoViewController.swift */; };
 		FD1F6576298673AE00BB4F9C /* CharacterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6561298673AE00BB4F9C /* CharacterCell.swift */; };
@@ -52,8 +52,8 @@
 		FD1F6555298673AD00BB4F9C /* Array+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Extension.swift"; sourceTree = "<group>"; };
 		FD1F6557298673AD00BB4F9C /* CustomErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		FD1F6558298673AD00BB4F9C /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		FD1F655B298673AE00BB4F9C /* EpisodeDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailCell.swift; sourceTree = "<group>"; };
-		FD1F655C298673AE00BB4F9C /* EpisodeDetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeDetailsTableViewController.swift; sourceTree = "<group>"; };
+		FD1F655B298673AE00BB4F9C /* EpisodeInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeInfoCell.swift; sourceTree = "<group>"; };
+		FD1F655C298673AE00BB4F9C /* EpisodeInfoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeInfoTableViewController.swift; sourceTree = "<group>"; };
 		FD1F655E298673AE00BB4F9C /* CharacterInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoCell.swift; sourceTree = "<group>"; };
 		FD1F655F298673AE00BB4F9C /* CharacterInfoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterInfoViewController.swift; sourceTree = "<group>"; };
 		FD1F6561298673AE00BB4F9C /* CharacterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CharacterCell.swift; sourceTree = "<group>"; };
@@ -150,10 +150,11 @@
 			sourceTree = "<group>";
 		};
 		FD1F655A298673AE00BB4F9C /* EpisodeDetailsView */ = {
+		FD1F655A298673AE00BB4F9C /* EpisodeInfoView */ = {
 			isa = PBXGroup;
 			children = (
-				FD1F655B298673AE00BB4F9C /* EpisodeDetailCell.swift */,
-				FD1F655C298673AE00BB4F9C /* EpisodeDetailsTableViewController.swift */,
+				FD1F655B298673AE00BB4F9C /* EpisodeInfoCell.swift */,
+				FD1F655C298673AE00BB4F9C /* EpisodeInfoTableViewController.swift */,
 			);
 			path = EpisodeDetailsView;
 			sourceTree = "<group>";
@@ -283,12 +284,12 @@
 				FD1F656A298673AE00BB4F9C /* Episode.swift in Sources */,
 				FD1F654A298673A000BB4F9C /* AppDelegate.swift in Sources */,
 				FD1F6569298673AE00BB4F9C /* Character.swift in Sources */,
-				FD1F6573298673AE00BB4F9C /* EpisodeDetailsTableViewController.swift in Sources */,
+				FD1F6573298673AE00BB4F9C /* EpisodeInfoTableViewController.swift in Sources */,
 				FD1F6579298673AE00BB4F9C /* EpisodeCell.swift in Sources */,
 				FD1F6549298673A000BB4F9C /* SceneDelegate.swift in Sources */,
 				FD1F656B298673AE00BB4F9C /* EpisodeInfo.swift in Sources */,
 				FD1F6574298673AE00BB4F9C /* CharacterInfoCell.swift in Sources */,
-				FD1F6572298673AE00BB4F9C /* EpisodeDetailCell.swift in Sources */,
+				FD1F6572298673AE00BB4F9C /* EpisodeInfoCell.swift in Sources */,
 				FD1F656C298673AE00BB4F9C /* UIView+Extensions.swift in Sources */,
 				FD1F6577298673AE00BB4F9C /* CharactersCollectionViewController.swift in Sources */,
 				FD1F6575298673AE00BB4F9C /* CharacterInfoViewController.swift in Sources */,

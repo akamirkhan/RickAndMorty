@@ -23,6 +23,7 @@ final class CharacterInfoViewController: UIViewController {
     }
     
     func setupData(for character: Character) {
+        title = character.name
         imageView.kf.indicatorType = .activity
         imageView.kf.setImage(with: URL(string: character.image))
         characterInfo = [

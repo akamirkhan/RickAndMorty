@@ -32,6 +32,7 @@ final class EpisodeInfoTableViewController: UITableViewController {
     }
     
     func setupData(for episode: Episode) {
+        title = episode.name
         episodeInfo = [episode.name, episode.airDate, episode.episode]
         loadCharacters(for: episode)
     }

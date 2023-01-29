@@ -7,46 +7,54 @@
 
 import UIKit
 
-typealias Handler<T: Codable> = (Result<T, NetworkError>) -> Void
-
-enum HttpMethod: String {
-    case get = "GET"
-    case post = "POST"
-}
+typealias Handler<T: Decodable> = (Result<T, NetworkError>) -> Void
 
 final class NetworkService {
     
-    func makeRequest<Model: Codable>(
-        to endpoint: Endpoint,
-        for method: HttpMethod = .get,
-        with body: Data? = nil,
-        completion: @escaping Handler<Model>
-    ) {
-        var request = URLRequest(url: endpoint.url)
-        request.httpMethod = method.rawValue
-        request.httpBody = body
+    typealias Completion = (Data?, URLResponse?, Error?) -> Void
+    
+    private let session = URLSession(configuration: .default)
+    private let decoder: JSONDecoder = {
+        let decoder = JSONDecoder()
+        decoder.keyDecodingStrategy = .convertFromSnakeCase
+        return decoder
+    }()
+
+    private func httpResponse(data: Data?, response: URLResponse?) throws -> Data {
+        guard let httpResponse = response as? HTTPURLResponse else {
+            throw NetworkError.nonHTTPResponse
+        }
+
+        switch httpResponse.statusCode {
+        case 200: return data ?? Data()
+        case 400...499:
+            throw NetworkError.requestFailed(httpResponse.statusCode)
+        case 500...599:
+            throw NetworkError.serverError(httpResponse.statusCode)
+        default:
+            fatalError("Unhandled HTTP Response Status code: \(httpResponse.statusCode)")
+        }
+    }
+    
+    func makeRequest<Model: Decodable>(to endpoint: Endpoint, completion: @escaping Handler<Model>) {
+        guard let url = endpoint.url else {
+            completion(.failure(.incorrectUrl))
+            return
+        }
         
-        URLSession.shared.dataTask(with: request) { response, _, error in
-            guard error == nil else {
-                completion(.failure(.serverError))
-                return
-            }
-            
-            guard let response = response else {
-                completion(.failure(.serverError))
-                return
-            }
-            
+        let handler: Completion = { rawData, response, error in
             do {
-                let decoder = JSONDecoder()
-                decoder.keyDecodingStrategy = .convertFromSnakeCase
-                let data = try decoder.decode(Model.self, from: response)
-                DispatchQueue.main.async { completion(.success(data)) }
+                let data = try self.httpResponse(data: rawData, response: response)
+                let response = try self.decoder.decode(Model.self, from: data)
+                DispatchQueue.main.async {
+                    completion(.success(response))
+                }
             } catch {
-                completion(.failure(.decodingError))
+                completion(.failure((error as? NetworkError) ?? .decodingError(error)))
             }
         }
-        .resume()
+
+        session.dataTask(with: url, completionHandler: handler).resume()
     }
     
 }

@@ -32,6 +32,7 @@
 		FD1F6579298673AE00BB4F9C /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */; };
 		FD1F657A298673AE00BB4F9C /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6566298673AE00BB4F9C /* EpisodesTableViewController.swift */; };
 		FD1F657E2986740D00BB4F9C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FD1F657D2986740D00BB4F9C /* Kingfisher */; };
+		FDD8DCB329867ECB00B55581 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCB229867ECB00B55581 /* Endpoint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -61,6 +62,7 @@
 		FD1F6563298673AE00BB4F9C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 		FD1F6566298673AE00BB4F9C /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		FDD8DCB229867ECB00B55581 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -195,6 +197,7 @@
 			sourceTree = "<group>";
 		};
 				FD1F6557298673AD00BB4F9C /* NetworkError.swift */,
+				FDD8DCB229867ECB00B55581 /* Endpoint.swift */,
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -289,6 +292,7 @@
 				FD1F656B298673AE00BB4F9C /* EpisodeInfo.swift in Sources */,
 				FD1F6574298673AE00BB4F9C /* CharacterInfoCell.swift in Sources */,
 				FD1F6572298673AE00BB4F9C /* EpisodeInfoCell.swift in Sources */,
+				FDD8DCB329867ECB00B55581 /* Endpoint.swift in Sources */,
 				FD1F656C298673AE00BB4F9C /* UIView+Extensions.swift in Sources */,
 				FD1F6577298673AE00BB4F9C /* CharactersCollectionViewController.swift in Sources */,
 				FD1F6575298673AE00BB4F9C /* CharacterInfoViewController.swift in Sources */,

@@ -140,7 +140,7 @@
 		FD1F6559298673AE00BB4F9C /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				FD1F655A298673AE00BB4F9C /* EpisodeDetailsView */,
+				FD1F655A298673AE00BB4F9C /* EpisodeInfoView */,
 				FD1F655D298673AE00BB4F9C /* CharacterInfoView */,
 				FD1F6560298673AE00BB4F9C /* CharactersView */,
 				FD1F6563298673AE00BB4F9C /* MainTabBarController.swift */,
@@ -149,14 +149,13 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
-		FD1F655A298673AE00BB4F9C /* EpisodeDetailsView */ = {
 		FD1F655A298673AE00BB4F9C /* EpisodeInfoView */ = {
 			isa = PBXGroup;
 			children = (
 				FD1F655B298673AE00BB4F9C /* EpisodeInfoCell.swift */,
 				FD1F655C298673AE00BB4F9C /* EpisodeInfoTableViewController.swift */,
 			);
-			path = EpisodeDetailsView;
+			path = EpisodeInfoView;
 			sourceTree = "<group>";
 		};
 		FD1F655D298673AE00BB4F9C /* CharacterInfoView */ = {

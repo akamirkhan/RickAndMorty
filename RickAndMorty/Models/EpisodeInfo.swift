@@ -1,5 +1,5 @@
 //
-//  Details.swift
+//  EpisodeInfo.swift
 //  RickAndMorty
 //
 //  Created by Amirkhan Akaev on 27.01.2023.

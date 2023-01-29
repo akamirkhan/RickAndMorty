@@ -10,7 +10,7 @@ import UIKit
 final class EpisodeInfoTableViewController: UITableViewController {
     
     private let activityIndicator = UIActivityIndicatorView(style: .large)
-    private let networkService = NetworkService()
+    private let networkService = RickAndMortyService()
     private var episodeInfo: [String?] = []
     var sections: [Sections] = [.info]
     

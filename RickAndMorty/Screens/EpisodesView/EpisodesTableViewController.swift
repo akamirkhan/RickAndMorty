@@ -9,7 +9,7 @@ import UIKit
 
 final class EpisodesTableViewController: UITableViewController {
     
-    private let networkService = NetworkService()
+    private let networkService = RickAndMortyService()
     private var episodes: [Episode] = []
     
     override func viewDidLoad() {

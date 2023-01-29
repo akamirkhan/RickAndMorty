@@ -9,7 +9,7 @@ import UIKit
 
 final class CharactersCollectionViewController: UICollectionViewController {
     
-    private let networkService = NetworkService()
+    private let networkService = RickAndMortyService()
     private var characters: [Character] = []
     
     override init(collectionViewLayout layout: UICollectionViewLayout) {

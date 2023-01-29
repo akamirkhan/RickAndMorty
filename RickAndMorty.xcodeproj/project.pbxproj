@@ -35,6 +35,7 @@
 		FDD8DCB329867ECB00B55581 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCB229867ECB00B55581 /* Endpoint.swift */; };
 		FDD8DCB8298683C200B55581 /* RickAndMorthyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCB7298683C200B55581 /* RickAndMorthyService.swift */; };
 		FDD8DCBB2986846D00B55581 /* RickAndMortyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCBA2986846D00B55581 /* RickAndMortyEndpoint.swift */; };
+		FDD8DCBE2986986700B55581 /* CharacterFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCBD2986986700B55581 /* CharacterFooterView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		FDD8DCB229867ECB00B55581 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FDD8DCB7298683C200B55581 /* RickAndMorthyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorthyService.swift; sourceTree = "<group>"; };
 		FDD8DCBA2986846D00B55581 /* RickAndMortyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyEndpoint.swift; sourceTree = "<group>"; };
+		FDD8DCBD2986986700B55581 /* CharacterFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterFooterView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +180,7 @@
 			children = (
 				FD1F6561298673AE00BB4F9C /* CharacterCell.swift */,
 				FD1F6562298673AE00BB4F9C /* CharactersCollectionViewController.swift */,
+				FDD8DCBD2986986700B55581 /* CharacterFooterView.swift */,
 			);
 			path = CharactersView;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 				FD1F654A298673A000BB4F9C /* AppDelegate.swift in Sources */,
 				FD1F6569298673AE00BB4F9C /* Character.swift in Sources */,
 				FD1F6573298673AE00BB4F9C /* EpisodeInfoTableViewController.swift in Sources */,
+				FDD8DCBE2986986700B55581 /* CharacterFooterView.swift in Sources */,
 				FD1F6579298673AE00BB4F9C /* EpisodeCell.swift in Sources */,
 				FDD8DCB8298683C200B55581 /* RickAndMorthyService.swift in Sources */,
 				FD1F6549298673A000BB4F9C /* SceneDelegate.swift in Sources */,

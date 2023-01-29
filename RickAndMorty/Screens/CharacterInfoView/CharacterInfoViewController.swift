@@ -39,7 +39,7 @@ final class CharacterInfoViewController: UIViewController {
     }
     
     private func setupViews() {
-        view.backgroundColor = .white
+        view.backgroundColor = .systemBackground
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 12
         imageView.clipsToBounds = true

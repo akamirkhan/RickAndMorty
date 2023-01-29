@@ -29,5 +29,5 @@ struct Location: Decodable {
 }
 
 struct CharacterInfo: Decodable {
-    let count: Int
+    let pages: Int
 }

@@ -51,7 +51,7 @@ final class CharactersCollectionViewController: UICollectionViewController {
         currentPage += 1
         isFetchInProgress = false
         characters.append(contentsOf: response.results)
-        isAllCharactersLoaded = characters.count == response.info.count
+        isAllCharactersLoaded = currentPage == response.info.pages
         collectionView.reloadData()
     }
 

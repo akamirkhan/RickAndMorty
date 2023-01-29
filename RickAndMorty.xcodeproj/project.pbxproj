@@ -108,7 +108,7 @@
 				FD1F6559298673AE00BB4F9C /* Screens */,
 				FD1F6548298673A000BB4F9C /* AppDelegate.swift */,
 				FD1F6547298673A000BB4F9C /* SceneDelegate.swift */,
-				FD1F657B298673C500BB4F9C /* SupportingFiles */,
+				FD1F657B298673C500BB4F9C /* Support files */,
 			);
 			path = RickAndMorty;
 			sourceTree = "<group>";
@@ -194,14 +194,14 @@
 			path = EpisodesView;
 			sourceTree = "<group>";
 		};
-		FD1F657B298673C500BB4F9C /* SupportingFiles */ = {
+		FD1F657B298673C500BB4F9C /* Support files */ = {
 			isa = PBXGroup;
 			children = (
 				FD1F653C2986737600BB4F9C /* Assets.xcassets */,
 				FD1F653E2986737600BB4F9C /* LaunchScreen.storyboard */,
 				FD1F65412986737600BB4F9C /* Info.plist */,
 			);
-			path = SupportingFiles;
+			path = "Support files";
 			sourceTree = "<group>";
 		};
 		FDD8DCB92986844E00B55581 /* RickAndMorty */ = {
@@ -467,11 +467,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9MJX5ZNFU4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMorty/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "RickAndMorty/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -496,11 +497,12 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9MJX5ZNFU4;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = RickAndMorty/SupportingFiles/Info.plist;
+				INFOPLIST_FILE = "RickAndMorty/Support files/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

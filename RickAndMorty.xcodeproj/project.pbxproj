@@ -32,6 +32,7 @@
 		FD1F6579298673AE00BB4F9C /* EpisodeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */; };
 		FD1F657A298673AE00BB4F9C /* EpisodesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD1F6566298673AE00BB4F9C /* EpisodesTableViewController.swift */; };
 		FD1F657E2986740D00BB4F9C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = FD1F657D2986740D00BB4F9C /* Kingfisher */; };
+		FD38E046298BC6FE009C6DC1 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD38E044298BC6FE009C6DC1 /* MainTabBarController.swift */; };
 		FDD8DCB329867ECB00B55581 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCB229867ECB00B55581 /* Endpoint.swift */; };
 		FDD8DCB8298683C200B55581 /* RickAndMorthyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCB7298683C200B55581 /* RickAndMorthyService.swift */; };
 		FDD8DCBB2986846D00B55581 /* RickAndMortyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDD8DCBA2986846D00B55581 /* RickAndMortyEndpoint.swift */; };
@@ -65,6 +66,7 @@
 		FD1F6563298673AE00BB4F9C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 		FD1F6566298673AE00BB4F9C /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		FD38E044298BC6FE009C6DC1 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FD38E045298BC6FE009C6DC1 /* ModuleTransitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionable.swift; sourceTree = "<group>"; };
 		FDD8DCB229867ECB00B55581 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FDD8DCB7298683C200B55581 /* RickAndMorthyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorthyService.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 			sourceTree = "<group>";
 		};
 		FD1F6564298673AE00BB4F9C /* EpisodesView */ = {
+				FD38E044298BC6FE009C6DC1 /* MainTabBarController.swift */,
 				FD38E045298BC6FE009C6DC1 /* ModuleTransitionable.swift */,
 			isa = PBXGroup;
 			children = (
@@ -314,6 +317,7 @@
 				FD1F656F298673AE00BB4F9C /* Array+Extension.swift in Sources */,
 				FD1F656A298673AE00BB4F9C /* Episode.swift in Sources */,
 				FD1F654A298673A000BB4F9C /* AppDelegate.swift in Sources */,
+				FD38E046298BC6FE009C6DC1 /* MainTabBarController.swift in Sources */,
 				FD1F6569298673AE00BB4F9C /* Character.swift in Sources */,
 				FD1F6573298673AE00BB4F9C /* EpisodeInfoTableViewController.swift in Sources */,
 				FDD8DCBE2986986700B55581 /* CharacterFooterView.swift in Sources */,

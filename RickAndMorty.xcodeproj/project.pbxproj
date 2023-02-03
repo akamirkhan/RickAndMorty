@@ -65,6 +65,7 @@
 		FD1F6563298673AE00BB4F9C /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodeCell.swift; sourceTree = "<group>"; };
 		FD1F6566298673AE00BB4F9C /* EpisodesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EpisodesTableViewController.swift; sourceTree = "<group>"; };
+		FD38E045298BC6FE009C6DC1 /* ModuleTransitionable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModuleTransitionable.swift; sourceTree = "<group>"; };
 		FDD8DCB229867ECB00B55581 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		FDD8DCB7298683C200B55581 /* RickAndMorthyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMorthyService.swift; sourceTree = "<group>"; };
 		FDD8DCBA2986846D00B55581 /* RickAndMortyEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RickAndMortyEndpoint.swift; sourceTree = "<group>"; };
@@ -186,6 +187,7 @@
 			sourceTree = "<group>";
 		};
 		FD1F6564298673AE00BB4F9C /* EpisodesView */ = {
+				FD38E045298BC6FE009C6DC1 /* ModuleTransitionable.swift */,
 			isa = PBXGroup;
 			children = (
 				FD1F6565298673AE00BB4F9C /* EpisodeCell.swift */,
@@ -303,6 +305,7 @@
 				FD1F656D298673AE00BB4F9C /* UITableView+Extensions.swift in Sources */,
 				FD1F6570298673AE00BB4F9C /* NetworkError.swift in Sources */,
 				FD1F6578298673AE00BB4F9C /* MainTabBarController.swift in Sources */,
+				FD38E047298BC6FE009C6DC1 /* ModuleTransitionable.swift in Sources */,
 				FD1F6567298673AE00BB4F9C /* SectionRow.swift in Sources */,
 				FD1F6576298673AE00BB4F9C /* CharacterCell.swift in Sources */,
 				FD1F657A298673AE00BB4F9C /* EpisodesTableViewController.swift in Sources */,

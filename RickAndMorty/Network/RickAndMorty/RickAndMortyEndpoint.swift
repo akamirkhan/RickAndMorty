@@ -19,7 +19,10 @@ extension Endpoint {
         Endpoint(path: "character/\(ids)")
     }
     
-    static var episodes: Self {
-        Endpoint(path: "episode")
+    static func episodes(for page: Int) -> Self {
+        Endpoint(
+            path: "episode",
+            queryItems: [URLQueryItem(name: "page", value: "\(page)")]
+        )
     }
 }
